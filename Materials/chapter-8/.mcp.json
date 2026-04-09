@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "aws-api-uv": {
+      "command": "uvx",
+      "args": [
+        "awslabs.aws-api-mcp-server@latest"
+      ],
+      "env": {
+        "AWS_REGION": "ap-northeast-1",
+        "AWS_PROFILE": "testdesuyo", 
+        "PATH": "C:\\Users\\<ユーザー名>\\.local\\bin\\",  
+        "READ_OPERATIONS_ONLY": "false",
+        "REQUIRE_MUTATION_CONSENT": "true",
+        "AWS_API_MCP_ALLOW_UNRESTRICTED_LOCAL_FILE_ACCESS": "workdir"
+      }
+    }
+  }
+}
