@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(aws sts get-caller-identity)",
+      "Bash(aws s3 ls *)",
+      "Bash(aws --version)"
+    ],
+    "ask": [
+      "Bash(pwsh *)"
+    ],
+    "deny": [
+      "Read(~/.aws/**)",
+      "Read(~/.ssh/**)",
+      "Bash(printenv)",
+      "Bash(env)",
+      "Bash(Get-ChildItem Env:)",
+      "Bash(rm -rf *)",
+      "Bash(del *)",
+      "Bash(Remove-Item *)",
+      "Bash(rmdir *)",
+      "Bash(rd /s *)",
+      "Bash(aws iam delete-*)",
+      "Bash(aws cloudformation delete-stack *)",
+      "Bash(aws organizations delete-*)",
+      "Bash(terraform destroy *)",
+      "Bash(terraform apply *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(sudo *)",
+      "Bash(runas *)"
+    ]
+  },
+  "awsAuthRefresh": "aws sso login --profile testdesuyo",
+  "env": {
+      "AWS_REGION": "ap-northeast-1",
+      "CLAUDE_CODE_USE_BEDROCK": "1",
+      "AWS_PROFILE": "testdesuyo",
+      "ANTHROPIC_MODEL": "global.anthropic.claude-sonnet-4-6"
+  }
+}

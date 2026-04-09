@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(aws sts get-caller-identity)",
+      "Bash(aws s3 ls *)",
+      "Bash(aws --version)"
+    ],
+    "ask": [
+      "Bash(pwsh *)"
+    ],
+    "deny": [
+      "Read(~/.aws/**)",
+      "Read(~/.ssh/**)",
+      "Bash(printenv)",
+      "Bash(env)",
+      "Bash(Get-ChildItem Env:)",
+      "Bash(rm -rf *)",
+      "Bash(del *)",
+      "Bash(Remove-Item *)",
+      "Bash(rmdir *)",
+      "Bash(rd /s *)",
+      "Bash(aws iam delete-*)",
+      "Bash(aws cloudformation delete-stack *)",
+      "Bash(aws organizations delete-*)",
+      "Bash(terraform destroy *)",
+      "Bash(terraform apply *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(sudo *)",
+      "Bash(runas *)"
+    ]
+  }
+}
